@@ -1,0 +1,18 @@
+dubbo:
+  registry:
+    address: nacos://127.0.0.1:8848
+    parameters:
+      registry-type: service  # 仅使用应用级服务发现
+  protocol:
+    name: tri
+    port: 3000
+  application:
+    name: dubbo-demo-provider
+    qos-enable: false
+  metadata-report:
+    file-cache: false
+
+
+spring:
+  application:
+    name: dubbo-demo-provider

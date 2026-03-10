@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+dubbo:
+  registry:
+    address: nacos://127.0.0.1:8848
+    parameters:
+      registry-type: service  # 与服务提供者保持一致，使用应用级服务发现
+  application:
+    name: dubbo-demo-consumer
+    qos-enable: false
+  metadata-report:
+    file-cache: false
+
+spring:
+  application:
+    name: dubbo-demo-consumer
